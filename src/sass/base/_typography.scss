@@ -1,0 +1,54 @@
+body {
+  // font-family: "Lato", sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: $color-white;
+}
+
+.heading-primary {
+  &--main {
+    display: block;
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: 2.5rem;
+    text-align: center;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-family: 5rem;
+    }
+  }
+
+  &--sub {
+    display: block;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: .7rem;
+    text-align: center;
+    line-height: 1.2;
+
+    @include respond(phone) {
+      letter-spacing: .5rem;
+    }
+  }
+}
+
+.noun-blank {
+  color: $red-noun;
+  font-weight: 700;
+  font-size: 120%;
+}
+
+.verb-blank {
+  color: $blue-verb;
+  font-weight: 700;
+  font-size: 120%;
+}
+
+.adjective-blank {
+  color: $yellow-adjective;
+  font-weight: 700;
+  font-size: 120%;
+}

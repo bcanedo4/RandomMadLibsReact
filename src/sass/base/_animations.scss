@@ -1,0 +1,17 @@
+@keyframes moveInBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(3rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+.moveInBottom {
+  transition: moveInBottom .25s ease-in-out;
+  -moz-transition: moveInBottom .25s ease-in-out;
+  -webkit-transition: moveInBottom .25s ease-in-out;
+}

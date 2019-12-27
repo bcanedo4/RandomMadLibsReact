@@ -1,0 +1,39 @@
+#copy-to-clipboard {
+  &__button {
+    display: inline-block;
+    position: relative;
+    background-color: $color-black;
+    color: $color-white;
+    border: 1px solid $color-white;
+    padding: 1.3rem 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  &__textarea {
+    height: 0;
+    width: 0;
+  }
+}
+
+#copy-to-clipboard {
+  &__clicked-pop-up {
+    position: absolute;
+    height: 4rem;
+    width: 7rem;
+    top: -5rem;
+    left: calc(50% - 4rem);
+    background-color: $color-white;
+    color: $color-black;
+    border-radius: 5px;
+
+    transition: moveInBottom 0.25s ease-in-out;
+    -moz-transition: moveInBottom 0.25s ease-in-out;
+    -webkit-transition: moveInBottom 0.25s ease-in-out;
+
+    & > p {
+      padding: 0.8rem 0;
+      font-size: 1.7rem;
+    }
+  }
+}

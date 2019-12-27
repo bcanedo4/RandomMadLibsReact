@@ -1,0 +1,47 @@
+.page {
+  &__container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 2rem 0;
+
+    // leave room for phone's url and bottom navigation 
+    @include respond(phone) {
+      padding: 4rem 0 10rem 0;
+    }
+  }
+}
+
+.title {
+  &__container {
+    width: 100%;
+    height: 10%;
+  }
+}
+
+.buttons {
+  &__container {
+    width: 100%;
+    height: 10%;
+  }
+}
+
+.load__new-button {
+  &__container {
+    display: inline-block;
+  }
+}
+
+.copy-to-clipboard__button {
+  &__container {
+    position: relative;
+    display: inline-block;
+  }
+}
+
+.sentence {
+  &__container {
+    width: 100%;
+    height: 80%;
+  }
+}

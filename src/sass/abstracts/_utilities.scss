@@ -1,0 +1,33 @@
+.hidden {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  display: none;
+  opacity: 0;
+}
+
+.shown {
+  display: block;
+}
+
+.test {
+  background-color: white;
+  height: 40rem;
+  width: 100%;
+}
+
+.inline {
+  height: 4rem;
+  width: 4rem;
+  display: block;
+  background-color: magenta;
+  float: left;
+}
+
+.block {
+  display: block;
+  height: 4rem;
+  width: 4rem;
+  background-color: blue;
+  float: left;
+}
