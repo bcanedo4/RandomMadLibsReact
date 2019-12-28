@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './js/App';
 import * as serviceWorker from './serviceWorker';
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
