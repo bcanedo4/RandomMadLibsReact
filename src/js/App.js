@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { generateRandomNumber, generateUniqueRandomNumber } from './generateRandomNumber';
 import { deleteContent } from './deleteContent';
+import { copyToClipboard } from './copyToClipboard';
 import '../css/App.css';
 
 const numberOfLibs = 6;
@@ -73,7 +74,7 @@ const App = () => {
               <button id="new-lib" onClick={() => generateNewLib()}>Load a New One</button>
             </div>
             <div className="copy-to-clipboard__button__container">
-              <button id="copy-to-clipboard__button" className="">
+              <button id="copy-to-clipboard__button" onClick={() => copyToClipboard(chosenLibText)}>
                 Copy to Clipboard
               </button>
               <div id="copy-to-clipboard__clicked-pop-up" className="hidden">
@@ -186,6 +187,5 @@ const iterateBlanks = (nounBlanks, verbBlanks, adjectiveBlanks) => {
     fetchWord("adjective", adjectiveBlanks, i);
   }
 };
-
 
 export default App;
