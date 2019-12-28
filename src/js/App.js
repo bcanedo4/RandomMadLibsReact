@@ -1,16 +1,17 @@
 import React, { useEffect } from 'react';
 import { generateRandomNumber, generateUniqueRandomNumber } from './generateRandomNumber';
+import { deleteContent } from './deleteContent';
 import '../css/App.css';
 
 const numberOfLibs = 6;
 let chosenLib;
 let chosenLibText;
 let response;
+let randomNumber = generateRandomNumber();
 
 const App = () => {
   useEffect(() => 
   {
-    const randomNumber = generateRandomNumber();
     return displayLib(randomNumber);
   }
   , []);
@@ -90,7 +91,28 @@ const App = () => {
 }
 
 // new Lib Button functionality
-const generateNewLib = () => {}
+const generateNewLib = () => {
+  // hide old one
+  chosenLib.classList.remove("shown");
+  chosenLib.className += " hidden";
+
+  let nounBlanks = chosenLib.getElementsByClassName("noun-blank");
+  let verbBlanks = chosenLib.getElementsByClassName("verb-blank");
+  let adjectiveBlanks = chosenLib.getElementsByClassName("adjective-blank");
+
+  // delete content of previous sentence
+  deleteContent(nounBlanks);
+  deleteContent(verbBlanks);
+  deleteContent(adjectiveBlanks);
+
+  // display new one
+  displayLib(
+    generateUniqueRandomNumber(
+      randomNumber,
+      Math.ceil(Math.random() * numberOfLibs)
+    )
+  );
+}
 
 const displayLib = (randomNumber) => {
   // random value is from 1 to numberOfLibs, anything is compared to -1;
