@@ -4,7 +4,7 @@ import { deleteContent } from './deleteContent';
 import { copyToClipboard } from './copyToClipboard';
 import '../css/App.css';
 
-const numberOfLibs = 6;
+let numberOfLibs;
 let chosenLib;
 let chosenLibText;
 let response;
@@ -13,6 +13,7 @@ let randomNumber = generateRandomNumber();
 const App = () => {
   useEffect(() => 
   {
+    numberOfLibs = document.querySelectorAll('.paragraph').length;
     return displayLib(randomNumber);
   }
   , []);
